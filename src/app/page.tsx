@@ -9,23 +9,23 @@ export default function Home() {
         title="Custom Stepper Example"
         steps={[
           {
-            label: "",
+            label: "Step 1",
             children: <div className="p-4">Content for Step 1</div>,
           },
           {
-            label: "",
+            label: "Step 2",
             children: <div className="p-4">Content for Step 2</div>,
           },
           {
-            label: "",
+            label: "Step 3",
             children: <div className="p-4">Content for Step 3</div>,
           },
           {
-            label: "",
+            label: "Step 4",
             children: <div className="p-4">Content for Step 4</div>,
           },
           {
-            label: "",
+            label: "Step 5",
             children: <div className="p-4">Content for Step 5</div>,
           },
         ]}

@@ -30,7 +30,7 @@ const CustomStepper = ({ steps, title }: CustomStepperProps) => {
       <div className="w-full max-w-4xl p-6">
         <h2 className="text-2xl font-semibold mb-4">{title}</h2>
 
-        <div className="flex items-center justify-center mb-2 px-6 w-full">
+        <div className="flex items-center justify-center sm:mb-2 mb-4 px-6 w-full">
           {steps.map((_step, i) => (
             <div
               key={i}
@@ -47,7 +47,7 @@ const CustomStepper = ({ steps, title }: CustomStepperProps) => {
                       ? "bg-blue-500 text-white"
                       : i === 0
                       ? "bg-blue-500 text-white"
-                      : "bg-white text-gray-500"
+                      : "bg-white text-gray-300"
                   }
                 `}
                 aria-current={i === activeStep}
@@ -70,12 +70,12 @@ const CustomStepper = ({ steps, title }: CustomStepperProps) => {
         </div>
 
         {/* Step labels */}
-        <div className="flex items-center justify-between mb-4 px-2 w-full">
+        <div className="hidden sm:flex  items-center justify-between mb-4 px-2 w-full">
           {steps.map((step, index) => (
             <div
               key={index}
               className={`text-md ${
-                index === activeStep ? "text-blue-500" : "text-gray-300"
+                index <= activeStep ? "text-blue-500" : "text-gray-300"
               }`}
             >
               {step.label}
@@ -97,26 +97,25 @@ const CustomStepper = ({ steps, title }: CustomStepperProps) => {
 
         {/* Navigation buttons */}
         <div
-          className={`flex xs:flex-row gap-3 xs:gap-0 flex-col items-center ${
-            activeStep > 0 ? "justify-between" : "justify-end"
-          } mt-6`}
+          className={`flex xs:flex-row gap-3 xs:gap-0 flex-col items-center 
+             justify-between
+         mt-6`}
         >
-          {activeStep > 0 && (
-            <button
-              className="bg-blue-500 xs:w-auto w-full rounded-md px-2 py-1 cursor-pointer text-white"
-              onClick={() => handlePrev()}
-            >
-              Prev
-            </button>
-          )}
-          {activeStep < steps.length - 1 && (
-            <button
-              className="bg-blue-500 xs:w-auto w-full rounded-md px-2 py-1 cursor-pointer text-white"
-              onClick={() => handleNext()}
-            >
-              Next
-            </button>
-          )}
+          <button
+            disabled={activeStep === 0}
+            className="bg-blue-500 xs:w-auto w-full rounded-md px-2 py-1 cursor-pointer text-white"
+            onClick={() => handlePrev()}
+          >
+            Prev
+          </button>
+
+          <button
+            disabled={activeStep === steps.length - 1}
+            className="bg-blue-500 xs:w-auto w-full rounded-md px-2 py-1 cursor-pointer text-white"
+            onClick={() => handleNext()}
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>
