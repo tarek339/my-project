@@ -1,0 +1,10 @@
+{
+  "home": {
+    "title": "Willkommen auf der Startseite",
+    "description": "Dies ist die Startseite der Anwendung. Hier finden Sie die neuesten Nachrichten und Updates."
+  },
+  "about": {
+    "title": "Über diese Anwendung",
+    "description": "Diese Anwendung wurde entwickelt, um den Benutzern ein nahtloses Erlebnis zu bieten. Sie umfasst Funktionen wie Benutzerauthentifizierung, Datenverwaltung und Echtzeit-Updates. Ziel ist es, eine benutzerfreundliche Oberfläche zu schaffen, die eine einfache Navigation und Interaktion mit den Funktionen der Anwendung ermöglicht."
+  }
+}

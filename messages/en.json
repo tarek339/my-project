@@ -1,0 +1,10 @@
+{
+  "home": {
+    "title": "Welcome to the Home Page",
+    "description": "This is the home page of the application. Here you will find the latest news and updates."
+  },
+  "about": {
+    "title": "About This Application",
+    "description": "This application is designed to provide users with a seamless experience. It includes features such as user authentication, data management, and real-time updates. The goal is to create a user-friendly interface that allows for easy navigation and interaction with the application's functionalities."
+  }
+}

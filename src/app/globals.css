@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* No need to add breakpoints here unless you want to use them as CSS variables in custom CSS.
+    Tailwind handles breakpoints via its own configuration and utility classes. */
+}
+
+@theme {
+  --breakpoint-xs: 425px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 @theme inline {
