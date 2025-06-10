@@ -12,6 +12,7 @@
     "@prisma/client": "^6.8.2",
     "@sequelize/core": "^7.0.0-alpha.42",
     "@sequelize/postgres": "^7.0.0-alpha.46",
+    "motion": "^12.16.0",
     "next": "15.3.2",
     "next-intl": "^4.1.0",
     "postcss": "^8.5.3",
