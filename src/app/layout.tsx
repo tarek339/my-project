@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
+import ChangeMode from "@/components/ChangeMode";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className="antialiased">
+        <ChangeMode />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
